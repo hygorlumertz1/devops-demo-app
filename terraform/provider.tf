@@ -12,14 +12,13 @@ terraform {
 provider "aws" {
   region = var.aws_region
 
-  # Para testes locais com LocalStack, descomente as linhas abaixo:
-  # access_key                  = "test"
-  # secret_key                  = "test"
-  # skip_credentials_validation = true
-  # skip_metadata_api_check     = true
-  # skip_requesting_account_id  = true
-  # endpoints {
-  #   s3          = "http://localhost:4566"
-  #   cloudfront  = "http://localhost:4566"
-  # }
+  # Credenciais mock para validação local (terraform plan/validate sem conta AWS).
+  # Para deploy real: exporte AWS_ACCESS_KEY_ID e AWS_SECRET_ACCESS_KEY, remova estas linhas.
+  # Para usar LocalStack: troque os endpoints pelo endereço do LocalStack (http://localhost:4566).
+  access_key = "mock_access_key"
+  secret_key = "mock_secret_key"
+
+  skip_credentials_validation = true
+  skip_metadata_api_check     = true
+  skip_requesting_account_id  = true
 }
