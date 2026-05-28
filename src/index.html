@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Demo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <span class="logo">DevOps Demo</span>
+      <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Pipeline DevOps na Prática</h1>
+      <p>Aplicação demonstrativa para o projeto da disciplina DevOps na Prática — PUCRS.</p>
+      <div class="badges">
+        <span class="badge">CI/CD</span>
+        <span class="badge">GitHub Actions</span>
+        <span class="badge">Terraform</span>
+        <span class="badge">AWS S3</span>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <div class="card-icon">⚙️</div>
+        <h2>Integração Contínua</h2>
+        <p>Pipeline automatizado que valida o código a cada push, executando lint e testes.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🚀</div>
+        <h2>Entrega Contínua</h2>
+        <p>Deploy automático para o ambiente de produção após a aprovação do pipeline.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🏗️</div>
+        <h2>Infraestrutura como Código</h2>
+        <p>Toda a infraestrutura AWS provisionada via Terraform, versionada no repositório.</p>
+      </article>
+    </section>
+
+    <section class="pipeline">
+      <h2>Fluxo do Pipeline</h2>
+      <ol class="steps">
+        <li><span>Push</span> Código enviado ao GitHub</li>
+        <li><span>Lint</span> Validação automática de HTML/CSS</li>
+        <li><span>Test</span> Testes automatizados</li>
+        <li><span>Build</span> Geração dos artefatos</li>
+        <li><span>Deploy</span> Publicação no S3/CloudFront</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto DevOps na Prática — PUCRS 2026 | Hygor Lumertz</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

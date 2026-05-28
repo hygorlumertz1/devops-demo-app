@@ -1,0 +1,21 @@
+{
+  "name": "devops-demo-app",
+  "version": "1.0.0",
+  "description": "Aplicação demonstrativa para o projeto da disciplina DevOps na Prática - PUCRS",
+  "scripts": {
+    "lint:html": "htmlhint src/index.html",
+    "lint:css": "stylelint src/style.css",
+    "lint:js": "eslint src/script.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "test": "jest --coverage",
+    "build": "cp -r src/ dist/"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
